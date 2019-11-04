@@ -8,7 +8,7 @@ function Title(props) {
         <div className="scores">
         Score: {props.score} Highscore: {props.highscore}
         </div>
-        <div className="instructions">Click on an image to earn points, but don't click on any more than once!</div>
+        <div className="instructions">{props.rightWrong}</div>
     </div>
   );
 }

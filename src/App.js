@@ -10,7 +10,7 @@ class App extends Component {
     cards,
     score: 0,
     highscore: 0,
-    rightWrong: "",
+    rightWrong: "Click on an image to earn points, but don't click on any more than once!",
     clicked:[]
   };
 
@@ -28,6 +28,7 @@ class App extends Component {
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
       this.setState({ clicked: this.state.clicked.concat(id) });
+      this.handleShuffle();
     } else {
       this.handleReset();
     }
@@ -37,7 +38,7 @@ class App extends Component {
     const newScore = this.state.score + 1;
     this.setState({
       score: newScore,
-      rightWrong: ""
+      rightWrong: "Click on an image to earn points, but don't click on any more than once!"
     });
     if (newScore >= this.state.highscore) {
       this.setState({ highscore: newScore });
@@ -66,8 +67,8 @@ class App extends Component {
   render() {
     return (
       <div>
+      <Title score={this.state.score} highscore={this.state.highscore} rightWrong={this.state.rightWrong}>Clicky Game!</Title>
       <Wrapper>
-      <Title score={this.state.score} highscore={this.state.highscore}>Clicky Game!</Title>
       <Status />
         {this.state.cards.map(card => (
           <ImageCard 

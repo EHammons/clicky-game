@@ -69,7 +69,6 @@ class App extends Component {
       <div>
       <Title score={this.state.score} highscore={this.state.highscore} rightWrong={this.state.rightWrong}>Clicky Game!</Title>
       <Wrapper>
-      <Status />
         {this.state.cards.map(card => (
           <ImageCard 
             id={card.id}

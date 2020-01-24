@@ -16,7 +16,6 @@ https://clicky-game-final.herokuapp.com/
 A fun Bootcamp project to create a simple click game. Click on each image only once, but be careful! The cards shuffle after every click!
 
 ## Screenshots
-### Concept
 ![Screenshot](public/images/clicky-game.png)<br>
 
 ## Technologies

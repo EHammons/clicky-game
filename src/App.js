@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ImageCard from "./components/ImageCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import Status from "./components/Status";
 import cards from "./cards.json"
 
 class App extends Component {
@@ -42,10 +41,10 @@ class App extends Component {
     });
     if (newScore >= this.state.highscore) {
       this.setState({ highscore: newScore });
-    }
-    else if (newScore === 12) {
-      this.setState({ rightWrong: "You win!" });
-    }
+      if (newScore === 12) {
+        this.setState({ rightWrong: "You win!" });
+      }
+    }    
     this.handleShuffle();
   };
 
@@ -53,7 +52,7 @@ class App extends Component {
     this.setState({
       score: 0,
       highscore: this.state.highscore,
-      rightWrong: "You lose!",
+      rightWrong: "Try Again!",
       clicked: []
     });
     this.handleShuffle();

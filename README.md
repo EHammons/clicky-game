@@ -5,6 +5,7 @@ https://clicky-game-final.herokuapp.com/
 
 ## Table of contents
 * [General info](#general-info)
+* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Features](#features)
 * [Status](#status)
@@ -13,6 +14,10 @@ https://clicky-game-final.herokuapp.com/
 
 ## General info
 A fun Bootcamp project to create a simple click game. Click on each image only once, but be careful! The cards shuffle after every click!
+
+## Screenshots
+### Concept
+![Screenshot](public/images/clicky-game.png)<br>
 
 ## Technologies
 * React
@@ -47,4 +52,4 @@ Based on the clicky-game assignment for The Coding Bootcamp at UT Austin.
 
 ## Contact
 Created by Elise Hammons - feel free to contact me!
-<br>LinkedIn: https://www.linkedin.com/in/elise-h-01243258/
+<br>[LinkedIn](https://www.linkedin.com/in/elise-h-01243258/)

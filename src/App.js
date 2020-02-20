@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import ImageCard from "./components/ImageCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import cards from "./cards.json"
+import cards from "./cards.json";
+import "./style.css";
 
 class App extends Component {
   state = {
     cards,
     score: 0,
     highscore: 0,
-    rightWrong: "Click on an image to earn points, but don't click on any more than once!",
+    rightWrong: "Click on an image to earn points, but don't click on them more than once!",
     clicked:[]
   };
 
@@ -37,7 +38,7 @@ class App extends Component {
     const newScore = this.state.score + 1;
     this.setState({
       score: newScore,
-      rightWrong: "Click on an image to earn points, but don't click on any more than once!"
+      rightWrong: "Click on an image to earn points, but don't click on them more than once!"
     });
     if (newScore >= this.state.highscore) {
       this.setState({ highscore: newScore });
@@ -65,21 +66,21 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-      <Title score={this.state.score} highscore={this.state.highscore} rightWrong={this.state.rightWrong}>Clicky Game!</Title>
-      <Wrapper>
-        {this.state.cards.map(card => (
-          <ImageCard 
-            id={card.id}
-            key={card.id}
-            image={card.image}
-            handleClick={this.handleClick}
-            handleIncrement={this.handleIncrement}
-            handleReset={this.handleReset}
-            handleShuffle={this.handleShuffle}
-          />
-        ))}
-      </Wrapper>
+      <div className="backapp">
+        <Title score={this.state.score} highscore={this.state.highscore} rightWrong={this.state.rightWrong}>Clicky Game!</Title>
+        <Wrapper>
+          {this.state.cards.map(card => (
+            <ImageCard 
+              id={card.id}
+              key={card.id}
+              image={card.image}
+              handleClick={this.handleClick}
+              handleIncrement={this.handleIncrement}
+              handleReset={this.handleReset}
+              handleShuffle={this.handleShuffle}
+            />
+          ))}
+        </Wrapper>
       </div>
     );
   }
